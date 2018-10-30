@@ -25,29 +25,32 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="4" />
-          <entry key="java" value="142" />
+          <entry key="java" value="521" />
           <entry key="xml" value="15" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="142" />
+          <entry key="JAVA" value="521" />
           <entry key="PLAIN_TEXT" value="4" />
           <entry key="XML" value="15" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="har" value="5" />
-          <entry key="java" value="6" />
+          <entry key="har" value="6" />
+          <entry key="java" value="9" />
           <entry key="properties" value="1" />
+          <entry key="txt" value="3" />
+          <entry key="xml" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="6" />
-          <entry key="PLAIN_TEXT" value="5" />
+          <entry key="JAVA" value="9" />
+          <entry key="PLAIN_TEXT" value="9" />
           <entry key="Properties" value="1" />
+          <entry key="XML" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
@@ -55,11 +58,30 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/epam/proxy/ProxyServerTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="364">
+              <caret line="50" lean-forward="true" selection-start-line="50" selection-end-line="50" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1728#1991#0" expanded="true" />
+                <element signature="e#1990#1991#0" expanded="true" />
+                <element signature="e#2179#2180#0" expanded="true" />
+                <element signature="e#2224#2225#0" expanded="true" />
+                <marker date="1540909853000" expanded="true" signature="2036:2129" ph="..." />
+                <marker date="1540909853000" expanded="true" signature="2612:3032" ph="..." />
+                <marker date="1540909853000" expanded="true" signature="2617:3032" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="315">
-              <caret line="21" column="31" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
+              <caret line="33" column="31" selection-start-line="33" selection-start-column="31" selection-end-line="33" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -73,25 +95,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/epam/proxy/ProxyServerTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="194">
-              <caret line="79" lean-forward="true" selection-start-line="79" selection-end-line="79" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1402#1403#0" expanded="true" />
-                <element signature="e#1445#1446#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/results/Chrome.har">
+        <entry file="file://$PROJECT_DIR$/results/response.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="6" selection-end-column="23076" />
+            <state relative-caret-position="85140">
+              <caret line="5676" selection-start-line="5676" selection-end-line="5676" />
             </state>
           </provider>
         </entry>
@@ -130,7 +138,7 @@
   <component name="ProjectFrameBounds">
     <option name="y" value="23" />
     <option name="width" value="1920" />
-    <option name="height" value="977" />
+    <option name="height" value="973" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -191,7 +199,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540900326539" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540910932394" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -262,14 +270,34 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ProxyServerTest.testFirefoxDriver" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="proxy" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.epam.proxy.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.epam.proxy" />
+      <option name="MAIN_CLASS_NAME" value="com.epam.proxy.ProxyServerTest" />
+      <option name="METHOD_NAME" value="testFirefoxDriver" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="TestNG.ProxyServerTestTemp.testMobProxyServer" />
       <item itemvalue="TestNG.ProxyServerTest" />
       <item itemvalue="TestNG.ProxyServerTest (1)" />
+      <item itemvalue="TestNG.ProxyServerTest.testFirefoxDriver" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="TestNG.ProxyServerTest" />
+        <item itemvalue="TestNG.ProxyServerTest.testFirefoxDriver" />
         <item itemvalue="TestNG.ProxyServerTest (1)" />
         <item itemvalue="TestNG.ProxyServerTestTemp.testMobProxyServer" />
       </list>
@@ -289,39 +317,39 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ProxyServerTest_testMobProxyServer - 2018.10.30 at 13h 46m 14s.xml">
-      <configuration name="ProxyServerTest.testMobProxyServer" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="ProxyServerTest_testMobProxyServer - 2018.10.30 at 13h 49m 46s.xml">
-      <configuration name="ProxyServerTest.testMobProxyServer" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="ProxyServerTest_testMobProxyServer - 2018.10.30 at 13h 58m 52s.xml">
-      <configuration name="ProxyServerTest.testMobProxyServer" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="ProxyServerTest_testMobProxyServer - 2018.10.30 at 14h 00m 02s.xml">
-      <configuration name="ProxyServerTest.testMobProxyServer" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="ProxyServerTest_testMobProxyServer - 2018.10.30 at 14h 00m 58s.xml">
-      <configuration name="ProxyServerTest.testMobProxyServer" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="ProxyServerTest_testMobProxyServer - 2018.10.30 at 14h 02m 45s.xml">
-      <configuration name="ProxyServerTest.testMobProxyServer" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="ProxyServerTest_testMobProxyServer - 2018.10.30 at 14h 06m 53s.xml">
-      <configuration name="ProxyServerTest.testMobProxyServer" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="ProxyServerTest - 2018.10.30 at 14h 24m 38s.xml">
+    <history-entry file="ProxyServerTest - 2018.10.30 at 16h 49m 18s.xml">
       <configuration name="ProxyServerTest" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="ProxyServerTest - 2018.10.30 at 14h 29m 33s.xml">
+    <history-entry file="ProxyServerTest - 2018.10.30 at 16h 49m 53s.xml">
       <configuration name="ProxyServerTest" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="ProxyServerTest - 2018.10.30 at 14h 48m 11s.xml">
+    <history-entry file="ProxyServerTest - 2018.10.30 at 16h 51m 40s.xml">
+      <configuration name="ProxyServerTest" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="ProxyServerTest - 2018.10.30 at 16h 52m 01s.xml">
+      <configuration name="ProxyServerTest" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="ProxyServerTest - 2018.10.30 at 17h 03m 33s.xml">
+      <configuration name="ProxyServerTest" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="ProxyServerTest - 2018.10.30 at 17h 03m 56s.xml">
+      <configuration name="ProxyServerTest" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="ProxyServerTest - 2018.10.30 at 17h 25m 41s.xml">
+      <configuration name="ProxyServerTest" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="ProxyServerTest - 2018.10.30 at 17h 27m 00s.xml">
+      <configuration name="ProxyServerTest" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="ProxyServerTest - 2018.10.30 at 17h 27m 59s.xml">
+      <configuration name="ProxyServerTest" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="ProxyServerTest - 2018.10.30 at 17h 31m 10s.xml">
       <configuration name="ProxyServerTest" configurationId="TestNG" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1920" height="977" extended-state="0" />
+    <frame x="0" y="23" width="1920" height="973" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Image Layers" />
@@ -334,11 +362,11 @@
       <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" weight="0.3299435" />
+      <window_info anchor="bottom" id="Messages" weight="0.3291714" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.2440678" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.47457626" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.19977298" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.16912599" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -388,13 +416,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/results/Firefox.har">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="22" selection-end-column="26670" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/epam/proxy/ProxyServerTestTemp.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="945">
@@ -412,21 +433,54 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_191.jdk/Contents/Home/src.zip!/java/io/FileWriter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="88" column="11" selection-start-line="88" selection-start-column="11" selection-end-line="88" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_191.jdk/Contents/Home/src.zip!/java/io/Writer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-889">
+          <caret line="155" column="16" selection-start-line="155" selection-start-column="16" selection-end-line="155" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results/response.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85140">
+          <caret line="5676" selection-start-line="5676" selection-end-line="5676" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results/Firefox.har">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="22" selection-end-column="26670" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
-          <caret line="21" column="31" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
+          <caret line="33" column="31" selection-start-line="33" selection-start-column="31" selection-end-line="33" selection-end-column="31" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/epam/proxy/ProxyServerTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="79" lean-forward="true" selection-start-line="79" selection-end-line="79" />
+        <state relative-caret-position="364">
+          <caret line="50" lean-forward="true" selection-start-line="50" selection-end-line="50" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1402#1403#0" expanded="true" />
-            <element signature="e#1445#1446#0" expanded="true" />
+            <element signature="e#1728#1991#0" expanded="true" />
+            <element signature="e#1990#1991#0" expanded="true" />
+            <element signature="e#2179#2180#0" expanded="true" />
+            <element signature="e#2224#2225#0" expanded="true" />
+            <marker date="1540909853000" expanded="true" signature="2036:2129" ph="..." />
+            <marker date="1540909853000" expanded="true" signature="2612:3032" ph="..." />
+            <marker date="1540909853000" expanded="true" signature="2617:3032" ph="..." />
           </folding>
         </state>
       </provider>

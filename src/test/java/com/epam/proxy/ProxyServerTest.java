@@ -1,11 +1,15 @@
 package com.epam.proxy;
 
+import io.netty.handler.codec.http.HttpResponse;
 import net.lightbody.bmp.BrowserMobProxy;
 import net.lightbody.bmp.BrowserMobProxyServer;
 import net.lightbody.bmp.client.ClientUtil;
 import net.lightbody.bmp.core.har.Har;
 import net.lightbody.bmp.core.har.HarEntry;
+import net.lightbody.bmp.filters.ResponseFilter;
 import net.lightbody.bmp.proxy.CaptureType;
+import net.lightbody.bmp.util.HttpMessageContents;
+import net.lightbody.bmp.util.HttpMessageInfo;
 import org.openqa.selenium.Proxy;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -21,7 +25,7 @@ import java.io.FileOutputStream;
 public class ProxyServerTest {
 
     public static final String WEBDRIVER_CHROME_DRIVER = "webdriver.chrome.driver";
-    private static final String WEBDRIVER_CHROMDRIVER_EXE_PATH  = "src/main/resources/webdrivers/mac/chromedriver";
+    private static final String WEBDRIVER_CHROMDRIVER_EXE_PATH = "src/main/resources/webdrivers/mac/chromedriver";
     private static final String WEBDRIVER_GECKO_DRIVER = "webdriver.gecko.driver";
     private static final String WEBDRIVER_GECKODRIVER_EXE_PATH = "src/main/resources/webdrivers/mac/geckodriver";
 
@@ -34,6 +38,14 @@ public class ProxyServerTest {
         mobProxy.start(0);
         int port = mobProxy.getPort();
         mobProxy.enableHarCaptureTypes(CaptureType.REQUEST_CONTENT, CaptureType.RESPONSE_CONTENT);
+
+        mobProxy.addResponseFilter(new ResponseFilter() {
+            @Override
+            public void filterResponse(HttpResponse response, HttpMessageContents contents, HttpMessageInfo messageInfo) {
+                contents.setTextContents("Hello");
+            }
+        });
+
         proxy = ClientUtil.createSeleniumProxy(mobProxy);
     }
 
@@ -48,7 +60,6 @@ public class ProxyServerTest {
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability(CapabilityType.PROXY, proxy);
         capabilities.setCapability("acceptInsecureCerts", true);
-
         WebDriver driver = new FirefoxDriver(capabilities);
 
         driver.get("http://google.com");
@@ -87,8 +98,7 @@ public class ProxyServerTest {
         FileOutputStream fos = new FileOutputStream(file);
         try {
             har.writeTo(fos);
-        }
-        finally {
+        } finally {
             fos.close();
         }
     }
