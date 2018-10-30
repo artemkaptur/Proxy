@@ -3,6 +3,9 @@
 /target/*
 
 /logs/*
+
 /test-output/*
+
+/results/*
 
 /proxy.iml
