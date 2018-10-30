@@ -1,8 +1,11 @@
 package com.epam.proxy;
 
+import net.lightbody.bmp.BrowserMobProxy;
+import net.lightbody.bmp.BrowserMobProxyServer;
+import net.lightbody.bmp.client.ClientUtil;
 import net.lightbody.bmp.core.har.Har;
 import net.lightbody.bmp.core.har.HarEntry;
-import net.lightbody.bmp.proxy.ProxyServer;
+import net.lightbody.bmp.proxy.CaptureType;
 import org.openqa.selenium.Proxy;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -22,19 +25,21 @@ public class ProxyServerTest {
     private static final String WEBDRIVER_GECKO_DRIVER = "webdriver.gecko.driver";
     private static final String WEBDRIVER_GECKODRIVER_EXE_PATH = "src/main/resources/webdrivers/mac/geckodriver";
 
-    private static ProxyServer server;
+    private static BrowserMobProxy mobProxy;
     private static Proxy proxy;
 
     @BeforeClass
     public static void setUpProxy() throws Exception {
-        server = new ProxyServer(4444);
-        server.start();
-        proxy = server.seleniumProxy();
+        mobProxy = new BrowserMobProxyServer();
+        mobProxy.start(0);
+        int port = mobProxy.getPort();
+        mobProxy.enableHarCaptureTypes(CaptureType.REQUEST_CONTENT, CaptureType.RESPONSE_CONTENT);
+        proxy = ClientUtil.createSeleniumProxy(mobProxy);
     }
 
     @BeforeMethod
     public void createNewHar() {
-        server.newHar("google.com");
+        mobProxy.newHar("google.com");
     }
 
     @Test
@@ -55,7 +60,7 @@ public class ProxyServerTest {
         System.setProperty(WEBDRIVER_CHROME_DRIVER, WEBDRIVER_CHROMDRIVER_EXE_PATH);
         ChromeOptions option = new ChromeOptions();
         option.addArguments("--proxy-server=localhost:"
-                + server.getPort());
+                + mobProxy.getPort());
         WebDriver driver = new ChromeDriver(option);
 
         driver.get("http://google.com");
@@ -64,7 +69,7 @@ public class ProxyServerTest {
 
     @AfterMethod
     public void saveHAR() throws Exception {
-        Har har = server.getHar();
+        Har har = mobProxy.getHar();
 
         for (HarEntry entry : har.getLog().getEntries()) {
             System.out.println(entry.getRequest().getUrl());
@@ -90,6 +95,6 @@ public class ProxyServerTest {
 
     @AfterClass
     public static void stopProxyServer() throws Exception {
-        server.stop();
+        mobProxy.stop();
     }
 }

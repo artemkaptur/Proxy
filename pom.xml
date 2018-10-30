@@ -16,9 +16,9 @@
         </dependency>
 
         <dependency>
-                <groupId>net.lightbody.bmp</groupId>
-                <artifactId>browsermob-proxy</artifactId>
-                <version>2.0.0</version>
+            <groupId>net.lightbody.bmp</groupId>
+            <artifactId>browsermob-core</artifactId>
+            <version>2.1.5</version>
             <scope>test</scope>
             <exclusions>
                 <exclusion>
