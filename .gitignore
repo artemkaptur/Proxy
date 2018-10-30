@@ -1,0 +1,8 @@
+/.idea/*
+
+/target/*
+
+/logs/*
+/test-output/*
+
+/proxy.iml
